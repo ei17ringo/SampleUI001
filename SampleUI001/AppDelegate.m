@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // int を指定する
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 10;
     return YES;
 }
 
