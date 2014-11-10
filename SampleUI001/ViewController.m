@@ -21,17 +21,18 @@
     [self createButton];
     
     
-    //水色の小さいビューを作成
+    //2.水色の小さいビューを作成
     _backView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, 250)];
     _backView.backgroundColor = [UIColor colorWithRed:0.192157 green:0.760784 blue:0.952941 alpha:1.0];
     [self.view addSubview:_backView];
 
-    //水色のViewにテキストフィールドを載せる
+    //3.水色のViewにテキストフィールドを載せる
     //テキストフィールドの初期化、位置、大きさの決定
     _myTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
     
     _myTextField.backgroundColor = [UIColor grayColor];
-    //テキストフィールドのReturnキーのイベントとメソッドtapReturnを関連付ける
+    
+    //4.テキストフィールドのReturnキーのイベントとメソッドtapReturnを関連付ける
     [_myTextField addTarget:self action:@selector(tapReturn) forControlEvents:UIControlEventEditingDidEndOnExit];
     
     [_backView addSubview:_myTextField];
